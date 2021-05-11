@@ -2,9 +2,11 @@
 let palabra= prompt('Escriba la palabra que quiere saber si es palindrome: ');
 
 function palindrome(palabra) {
+
+    const palabraUno = palabra.replace(' ','');
    
     // método convierte la cadena en caracteres de matriz individuales
-    const arrayValues = palabra.split('');
+    const arrayValues = palabraUno.split('');
 
     //método invierte la posición en una matriz.
     const reversePalabra = arrayValues.reverse();
@@ -12,7 +14,7 @@ function palindrome(palabra) {
     // convert array to string
     const reverseString = reversePalabra.join('');
 
-    if(palabra == reverseString) {
+    if(palabraUno == reverseString) {
         alert('Es palindrome');
     }
     else {
